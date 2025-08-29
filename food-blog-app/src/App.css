@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0.8rem 2rem;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #213547;
+}
+
+header ul {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+}
+
+li a {
+  color: #213547;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+li a:hover, .active {
+  background-color: #0cb879;
+  color: #fff !important;
+}
+
+/* Section */
+section {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 6rem;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  margin-top: 3rem;
+  gap: 5rem;
+  align-items: center;
+}
+
+.home .left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #213547;
+}
+
+.home .left h5 {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.home button {
+  color: #fff;
+  border: none;
+  background-color: #0cb879;
+  width: 220px;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home button:hover {
+  background-color: #099962;
+}
+
+/* Cards */
+.card-container {
+  width: 85%;
+  margin: 2.5rem auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  background-color: #f9fdfb;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.card-body .title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #213547;
+}
+
+.card-body .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.card-body .timer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #0cb879;
+}
+
+.action {
+  display: flex;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 40%;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9;
+}
+
+/* Form */
+.form {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.form-control label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #213547;
+}
+
+.form-control .input,
+.form-control .input-textarea {
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.form button {
+  margin-top: 1.5rem;
+  background-color: #0cb879;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #099962;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 45px;
+  color: white;
+  background-color: #213547;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding-top: 12px;
+  font-size: 15px;
+}
+
+/* Recipe Detail */
+.outer-container {
+  width: 80%;
+  margin: 6rem auto;
+}
+
+.outer-container .profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.outer-container .recipe-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 1.2rem;
+}
+/* === HEADER & LOGOUT BUTTON FIX === */
+header {
+  background-color: #ffffff;
+  color: #213547;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header ul li a {
+  background-color: #213547; /* Button background */
+  color: #fff !important; /* White text for better contrast */
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+header ul li a:hover {
+  background-color: #2c4860; /* Darker hover */
+  color: #fff !important;
+}
+
+/* === HOME SECTION TEXT FIX === */
+.home .left h1 {
+  font-size: 2.5rem;
+  color: #213547;
+  font-weight: 700;
+}
+
+.home .left h5 {
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* === CARD IMAGE & TEXT FIX === */
+.card img {
+  width: 100%;
+  height: 180px; /* Ensures image fits card */
+  object-fit: cover; /* Prevents distortion */
+}
+
+.card-body {
+  background-color: #f5f5f5; /* Light grey for contrast */
+  color: #213547;
+  padding: 1rem;
+}
+
+.card-body .title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #213547;
+}
+
+.card-body .timer {
+  color: #555;
+  font-weight: 500;
+}
+
+/* === MAKE ALL TEXT MORE VISIBLE === */
+body {
+  background-color: #fafafa; /* Light grey for better section contrast */
+  color: #213547;
+}
