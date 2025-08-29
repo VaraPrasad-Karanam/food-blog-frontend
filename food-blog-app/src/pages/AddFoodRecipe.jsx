@@ -18,7 +18,7 @@ Object.keys(recipeData).forEach(key => {
   formData.append(key, recipeData[key]);
 });
 try {
-  await axios.post("http://localhost:5000/recipe", formData, {
+  await axios.post("https://food-blog-backend.onrender.com/recipe", formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
       'Authorization': 'Bearer ' + localStorage.getItem("token")
